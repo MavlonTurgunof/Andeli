@@ -71,7 +71,7 @@ function AiSec() {
                 <img
                   src="/img/AIAsistent.svg"
                   alt="AI Assistant"
-                  className="mx-auto w-[150px] md:w-[200px] md:mt-[80px]"
+                  className="mx-auto w-[150px] md:w-[200px] mt-[80px] "
                 />
               )}
 

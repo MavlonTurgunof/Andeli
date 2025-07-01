@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../Components/Container";
 import ProCard from "../../Components/ProCard";
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -87,9 +88,12 @@ function ProductList2() {
             <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
           </div>
           <div className="flex items-center cursor-pointer">
-            <h1 className="md:font-medium font-normal max-md:text-[12px]">
+            <Link
+              to={"/products/allproducts"}
+              className="md:font-medium font-normal max-md:text-[12px] "
+            >
               Показать все
-            </h1>
+            </Link>
             <img src="/img/right.svg" alt="" />
           </div>
         </div>

@@ -8,9 +8,9 @@ function Navbar() {
 
   return (
     <div>
-      <div className="max-md:hidden border-b-1 border-[#EDEDED]">
+      <div className="max-md:hidden border-b-1 border-[#EDEDED] ">
         <Container>
-          <div className="flex gap-[18px] justify-center items-center py-[16px]">
+          <div className="sticky flex gap-[18px] justify-center items-center py-[16px]">
             <NavLink
               to={"/"}
               className={({ isActive }) =>
