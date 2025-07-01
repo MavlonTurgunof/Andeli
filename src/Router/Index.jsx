@@ -12,18 +12,17 @@ import ScrollToTop from "../Components/ScrollToTop";
 function Index() {
   return (
     <BrowserRouter>
-      <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<AppLayout />}>
-            <Route index element={<Home />} />
-            <Route path="products" element={<Products />} />
-            <Route path="/products/detail" element={<ProductDetailPage />} />
-            <Route path="products/allproducts" element={<AllProducts />} />
-            <Route path="ai-assistant" element={<AIasistent />} />
-            <Route path="contact" element={<Contact />} />
-          </Route>
-        </Routes>
-      </ScrollToTop>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="/products/detail" element={<ProductDetailPage />} />
+          <Route path="products/allproducts" element={<AllProducts />} />
+          <Route path="ai-assistant" element={<AIasistent />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
