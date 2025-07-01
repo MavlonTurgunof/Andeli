@@ -2,12 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../../pages/Home";
 import Products from "../../pages/Products";
-
 import AIasistent from "../../pages/AIasistent";
 import Contact from "../../pages/Contact";
 import AppLayout from "../Components/AppLayout";
 import AllProducts from "../../pages/AllProducts";
-import ProductDetail from "../Container/Products/ProductDetail";
 import ProductDetailPage from "../../pages/ProductDetailPage";
 
 function Index() {
