@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hide default scrollbar track but keep it functional */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #008ecc; /* your brand color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #006fa1; /* darker on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #008ecc transparent;
+}
