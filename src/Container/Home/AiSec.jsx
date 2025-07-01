@@ -55,23 +55,23 @@ function AiSec() {
 
   return (
     <Container>
-      <div className="my-[63px]">
-        <div className="border-b-1 border-[#EDEDED] mb-[63px]">
-          <h1 className="text-[#666666] text-[24px] font-bold">
-            AI <span className="text-[#008ECC]">Assistant</span>
+      <div className="my-8 px-4 md:px-0">
+        <div className="border-b-1 border-[#EDEDED]">
+          <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] max-md:w-fit">
+            AI <span className="text-[#008ECC]">Asistent</span>
           </h1>
-          <div className="bg-[#008ECC] h-[3px] w-[378px]" />
+          <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
         </div>
 
-        <div className="bg-[#CFE3F0] h-[557px] rounded-[16px] flex justify-center">
+        <div className="bg-[#CFE3F0] h-[80vh] md:h-[557px] rounded-[16px] flex justify-center md:mt-[40px] mt-[10px]">
           <div className="flex flex-col justify-between w-full max-w-[600px] px-4 py-6">
             {/* Chat History */}
-            <div className="flex flex-col gap-4 overflow-auto max-h-[400px] pr-2">
+            <div className="flex flex-col gap-4 overflow-auto max-h-[60vh] pr-2">
               {chatHistory.length === 0 && !loading && (
                 <img
                   src="/img/AIAsistent.svg"
                   alt="AI Assistant"
-                  className="mx-auto w-[200px] mt-[80px]"
+                  className="mx-auto w-[150px] md:w-[200px] md:mt-[80px]"
                 />
               )}
 
@@ -86,11 +86,11 @@ function AiSec() {
                     <img
                       src="/img/AIAsistent.svg"
                       alt="AI"
-                      className="w-[40px] h-[40px]"
+                      className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
                     />
                   )}
                   <p
-                    className={`p-3 rounded-[12px] max-w-[80%] ${
+                    className={`p-3 rounded-[12px] max-w-[80%] break-words ${
                       msg.role === "user"
                         ? "bg-[#008ECC] text-white"
                         : "bg-white text-[#333]"
@@ -107,20 +107,20 @@ function AiSec() {
             </div>
 
             {/* Input */}
-            <div className="flex gap-[8px] mt-4">
+            <div className="flex gap-2 mt-4">
               <input
                 type="text"
                 placeholder="Let's Talk"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 onKeyDown={handleKeyPress}
-                className="p-[8px] rounded-[12px] bg-white w-full outline-none focus:border-2 focus:border-[#008ECC]"
+                className="p-3 rounded-[12px] bg-white w-full text-sm outline-none focus:border-2 focus:border-[#008ECC]"
               />
               <button
                 onClick={handleAsk}
-                className="p-[8px] rounded-[12px] bg-[#0067B3]"
+                className="p-3 rounded-[12px] bg-[#0067B3]"
               >
-                <img src="/img/SendBtn.svg" alt="Send" />
+                <img src="/img/SendBtn.svg" alt="Send" className="w-6 h-6" />
               </button>
             </div>
           </div>

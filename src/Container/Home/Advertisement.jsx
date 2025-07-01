@@ -28,7 +28,7 @@ function Advertisement() {
   };
   return (
     <Container>
-      <div className="relative py-[20px]">
+      <div className="max-md:hidden relative py-[20px]">
         <div className="overflow-hidden rounded-[16px] h-[310px] mx-[43px]">
           <img
             src={slides[currentIndex].img}
@@ -66,6 +66,16 @@ function Advertisement() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="md:hidden overflow-hidden snap-x snap-mandatory flex gap-4 px-4 py-6 scrollbar-hide">
+        {slides.map((slide) => (
+          <img
+            key={slide.id}
+            src={slide.img}
+            alt={`Slide ${slide.id}`}
+            className="w-full flex-shrink-0 h-auto object-cover rounded-[16px] snap-center"
+          />
+        ))}
       </div>
     </Container>
   );

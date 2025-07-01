@@ -6,7 +6,7 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 
 function ContactInfo() {
   return (
-    <div className="bg-[#008ECC] text-white rounded-[10px] p-[40px] pr-[114px]">
+    <div className="bg-[#008ECC] text-white rounded-[10px] p-[40px] md:pr-[114px]">
       <h1 className="text-[28px] font-semibold">Contact Information</h1>
       <p className="text-[18px] font-normal mb-[42px]">
         Say something to start a live chat!

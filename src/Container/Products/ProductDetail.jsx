@@ -25,50 +25,54 @@ const ProductDetail = () => {
 
   return (
     <Container>
-      <div className="flex mt-[32px] flex-row gap-[45px] mb-[25px]">
-        {/* Left side: Thumbnails and Main Image */}
-        <div className="flex flex-row gap-[24px] pb-[62px] border-b-1 border-[#E5E7EB]">
-          <div className="flex flex-col gap-[16px]">
-            {product.images.map((img, idx) => (
-              <div className="bg-[#F3F9FB] rounded-[16px]">
-                <img
-                  key={idx}
-                  src={`${img}`}
-                  alt={`Thumbnail ${idx}`}
-                  className={`w-[140px] h-[157.5px] object-contain cursor-pointer border rounded-[16px] ${
-                    selectedImage === idx
-                      ? "border-blue-500"
-                      : "border-gray-300"
-                  }`}
-                  onClick={() => setSelectedImage(idx)}
-                />
-              </div>
-            ))}
+      <div className="px-[10px]">
+        <div className="flex mt-[32px] md:flex-row flex-col gap-[45px] mb-[25px]">
+          {/* Left side: Thumbnails and Main Image */}
+          <div className="flex md:flex-row flex-col-reverse gap-[24px] pb-[62px] border-b-1 border-[#E5E7EB]">
+            <div className="flex md:flex-col flex-row md:gap-[16px] gap-[10px]">
+              {product.images.map((img, idx) => (
+                <div className="bg-[#F3F9FB] rounded-[16px] w-full h-[] md:w-[140px] md:h-[157.5px]">
+                  <img
+                    key={idx}
+                    src={`${img}`}
+                    alt={`Thumbnail ${idx}`}
+                    className={`w-full h-full object-contain cursor-pointer border rounded-[16px] ${
+                      selectedImage === idx
+                        ? "border-blue-500"
+                        : "border-gray-300"
+                    }`}
+                    onClick={() => setSelectedImage(idx)}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="w-full md:w-[640px] md:h-[678px] h-[420px] bg-[#F3F9FB]">
+              <img
+                src={product.images[selectedImage]}
+                alt="Main Product"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
-          <div className="w-[640px] h-[678px] bg-[#F3F9FB]">
-            <img
-              src={product.images[selectedImage]}
-              alt="Main Product"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
 
-        {/* Right side: Product Info */}
-        <div className="mt-[25px]">
-          <h2 className="text-[36px] font-semibold">{product.name}</h2>
-          <ul className="list-disc pl-5 text-[16px] font-normal">
-            {product.specs.map((spec, idx) => (
-              <li key={idx} className="">
-                {spec}
-              </li>
-            ))}
-          </ul>
+          {/* Right side: Product Info */}
+          <div className="md:mt-[25px]">
+            <h2 className=" text-center md:text-[36px] md:font-semibold text-[30px] font-semibold">
+              {product.name}
+            </h2>
+            <ul className="list-disc md:pl-5 text-[16px] font-normal pl-[20px]">
+              {product.specs.map((spec, idx) => (
+                <li key={idx} className="">
+                  {spec}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
-      <div className="text-[16px] font-normal mb-[71px]">
-        <h1>Описание товара</h1>
-        <p>{product.description}</p>
+        <div className="text-[16px] font-normal mb-[71px]">
+          <h1 className="font-semibold text-[18px]">Описание товара:</h1>
+          <p>{product.description}</p>
+        </div>
       </div>
     </Container>
   );

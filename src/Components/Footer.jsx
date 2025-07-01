@@ -6,9 +6,9 @@ function Footer() {
   return (
     <div className="relative bg-[#008ECC] text-white">
       <Container>
-        <div className=" grid grid-cols-1 md:grid-cols-3 pb-[210px] w-[95%] pt-[81px]">
+        <div className=" grid grid-cols-1  md:grid-cols-3 pb-[50px] md:pb-[210px] w-[95%] pt-[30px] md:pt-[81px] max-md:pl-[40px]">
           {/* Left - Logo & Contact */}
-          <div>
+          <div className="pb-[20px]">
             <img src="/img/LogoWhite.svg" alt="" className="mb-[49px]" />
 
             <p className="mt-2 text-[20px] font-bold">Contact Us</p>
@@ -29,9 +29,9 @@ function Footer() {
           </div>
 
           {/* Middle - Info */}
-          <div>
+          <div className="border-t-1 border-[#05ABF3] py-[20px]">
             <div className="mb-[]">
-              <h2 className=" font-semibold text-[20px] mb-2 border-b-3 border-white w-fit pb-[8px]">
+              <h2 className=" font-semibold text-[20px] mb-2 md:border-b-3 md:border-white w-fit pb-[8px]">
                 Information
               </h2>
             </div>
@@ -58,8 +58,8 @@ function Footer() {
           </div>
 
           {/* Right - Social Media */}
-          <div>
-            <h2 className="text-[20px] font-semibold border-b-3 border-white w-fit pb-[8px]">
+          <div className="border-t-1 border-[#05ABF3] pt-[20px]">
+            <h2 className="text-[20px] font-semibold md:border-b-3 md:border-white w-fit pb-[8px]">
               Social Media
             </h2>
 
@@ -84,11 +84,11 @@ function Footer() {
         </div>
 
         {/* Bottom Line */}
-        <div className="mt-10 border-t-1 border-[#05ABF3] py-[30px] text-center text-[20px] font-normal ">
+        <div className="mt-10 border-t-1 border-[#05ABF3] py-[30px] text-center text-[15px] md:text-[20px] font-normal ">
           © 2022 All rights reserved. Reliance Retail Ltd.
         </div>
       </Container>
-      <div className="absolute top-0 right-0">
+      <div className="max-md:hidden absolute top-0 right-0">
         <img src="/img/CircleCorner.svg" alt="" />
       </div>
     </div>

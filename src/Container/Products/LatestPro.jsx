@@ -44,23 +44,25 @@ const data = [
 function LatestPro() {
   return (
     <Container>
-      <div className="my-[102px]">
+      <div className="my-[40px] md:my-[102px] max-md:px-[10px]">
         <div className="border-b-1 border-[#EDEDED] flex justify-between items-center">
           <div>
-            <h1 className="text-[#666666] text-[24px] font-bold">
+            <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] w-fit">
               Andeli <span className="text-[#008ECC]">Стабилизатор</span>
             </h1>
-            <div className="bg-[#008ECC] h-[3px] w-[378px]" />
+            <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
           </div>
-          <Link
-            to={"/products/allproducts"}
-            className="flex items-center cursor-pointer"
-          >
-            <h1 className="font-medium">Показать все</h1>
+          <div className="flex items-center cursor-pointer">
+            <Link
+              to={"/products/allproducts"}
+              className="md:font-medium font-normal max-md:text-[12px] "
+            >
+              Показать все
+            </Link>
             <img src="/img/right.svg" alt="" />
-          </Link>
+          </div>
         </div>
-        <div className="grid grid-cols-5 mt-[41px] gap-x-[16px] gap-y-[84px]">
+        <div className="grid grid-cols-2 md:grid-cols-5 mt-[41px] md:gap-x-[16px] md:gap-y-[84px] gap-2">
           {data.map((prod) => (
             <ProCard prod={prod} />
           ))}
