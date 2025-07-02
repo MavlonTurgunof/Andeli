@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../../Components/Container";
+import { Link } from "react-router-dom";
 
 function TypePro() {
   return (
@@ -14,8 +15,26 @@ function TypePro() {
           </div>
         </div>
         <div className="flex md:flex-row flex-col justify-between max-md:gap-4 md:mx-[37px] md:mb-[148px]">
-          <img src="/img/Type1.svg" alt="" />
-          <img src="/img/Type2.svg" alt="" />
+          <Link
+            to={"products/Настенное"}
+            className="hover:scale-105 hover:shadow-2xl shadow-blue-400 hover:rounded-[36px] transition-all duration-500 cursor-pointer  "
+          >
+            <img
+              src="/img/Banner1.svg"
+              alt=""
+              className="rounded-[16px] md:rounded-[30px] md:w-[517px] md:h-[207px]"
+            />
+          </Link>
+          <Link
+            to={"products/Напольное"}
+            className="hover:scale-105 hover:shadow-2xl shadow-blue-400 hover:rounded-[36px] transition-all duration-500 cursor-pointer  "
+          >
+            <img
+              src="/img/Type2.svg"
+              alt=""
+              className="rounded-[16px] md:rounded-[30px] md:w-[517px] md:h-[207px]"
+            />
+          </Link>
         </div>
       </div>
     </Container>

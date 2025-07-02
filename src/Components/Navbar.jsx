@@ -33,7 +33,7 @@ function Navbar() {
                 }`
               }
             >
-              Products
+              Продукты
             </NavLink>
             <NavLink
               to={"ai-assistant"}
@@ -45,7 +45,7 @@ function Navbar() {
                 }`
               }
             >
-              Artificial Intelligence
+              AI Помощник
             </NavLink>
             <NavLink
               to={"contact"}
@@ -57,7 +57,7 @@ function Navbar() {
                 }`
               }
             >
-              Contacts
+              Контакты
             </NavLink>
           </div>
         </Container>
@@ -65,89 +65,65 @@ function Navbar() {
 
       {/* Mobile Navbar */}
 
-      <div className="md:hidden py-[10px] border-b-1 border-[#EDEDED]">
-        <div className="flex justify-between items-center px-[10px]">
-          <img src="/img/Logo.svg" alt="" className="" />
-          <div className="md:hidden ">
-            <button
-              className="lg:hidden bg-[#0067B3] p-3 rounded-[15px]"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <img src="/img/menu.svg" alt="menu" className="h-7 w-8" />
-            </button>
-          </div>
+      <div className="md:hidden py-2 border-b border-[#EDEDED]">
+        <div className="flex justify-between items-center px-4">
+          <img src="/img/Logo.svg" alt="Logo" />
+          <button
+            className="bg-[#0067B3] p-2 rounded-xl"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <img src="/img/menu.svg" alt="menu" className="h-7 w-8" />
+          </button>
         </div>
 
+        {/* Overlay backdrop */}
         {mobileMenuOpen && (
           <div
-            className="fixed inset-0 bg-black/40 z-40"
+            className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
             onClick={() => setMobileMenuOpen(false)}
           />
         )}
+
+        {/* Slide-in Menu */}
         <div
-          className={`p-[10px] rounded-tl-3xl fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white z-50 duration-1000 ${
+          className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-50 shadow-lg transform transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          } rounded-tl-3xl`}
         >
-          <div className="flex flex-row">
-            <button onClick={() => setMobileMenuOpen(false)}>
-              <XIcon />
+          {/* Close Button */}
+          <div className="flex justify-start p-4">
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-600 hover:text-red-500 transition"
+            >
+              <XIcon className="h-6 w-6" />
             </button>
           </div>
-          <div className="flex flex-col gap-[18px] justify-center items-start py-[16px] pl-[70px]">
-            <NavLink
-              to={"/"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to={"/products"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px] rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Products
-            </NavLink>
-            <NavLink
-              to={"ai-assistant"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px] rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Artificial Intelligence
-            </NavLink>
-            <NavLink
-              to={"contact"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contacts
-            </NavLink>
-          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col items-start px-8 py-4 space-y-4">
+            {[
+              { to: "/", label: "Home" },
+              { to: "/products", label: "Продукты" },
+              { to: "/ai-assistant", label: "AI Помощник" },
+              { to: "/contact", label: "Контакты" },
+            ].map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `w-full text-left px-4 py-2 rounded-full text-sm font-medium transition duration-150 ${
+                    isActive
+                      ? "bg-[#0067B3] text-white shadow"
+                      : "bg-[#F3F9FB] text-black hover:bg-[#DFF1FA]"
+                  }`
+                }
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </nav>
         </div>
       </div>
     </div>

@@ -58,7 +58,7 @@ function AiSec() {
       <div className="my-8 px-4 md:px-0">
         <div className="border-b-1 border-[#EDEDED]">
           <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] max-md:w-fit">
-            AI <span className="text-[#008ECC]">Asistent</span>
+            AI <span className="text-[#008ECC]">Помощник</span>
           </h1>
           <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
         </div>
@@ -110,7 +110,7 @@ function AiSec() {
             <div className="flex gap-2 mt-4">
               <input
                 type="text"
-                placeholder="Let's Talk"
+                placeholder="Давайте поговорим"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 onKeyDown={handleKeyPress}

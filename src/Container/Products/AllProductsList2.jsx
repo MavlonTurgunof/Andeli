@@ -109,27 +109,123 @@ const data = [
     description: "Стабилизатор напряжений",
     type: "Вертикальный",
   },
+  {
+    id: 16,
+    image: "/img/Stablizators/img1.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 17,
+    image: "/img/Stablizators/img2.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 18,
+    image: "/img/Stablizators/img3.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 19,
+    image: "/img/Stablizators/img4.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 20,
+    image: "/img/Stablizators/img1.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 21,
+    image: "/img/Stablizators/img2.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 22,
+    image: "/img/Stablizators/img3.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 23,
+    image: "/img/Stablizators/img4.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 24,
+    image: "/img/Stablizators/img3.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 25,
+    image: "/img/Stablizators/img4.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 26,
+    image: "/img/Stablizators/img2.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 27,
+    image: "/img/Stablizators/img3.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 28,
+    image: "/img/Stablizators/img4.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 29,
+    image: "/img/Stablizators/img3.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
+  {
+    id: 30,
+    image: "/img/Stablizators/img4.svg",
+    name: "ANDELI SVC-D1000VA",
+    description: "Стабилизатор напряжений",
+    type: "Вертикальный",
+  },
 ];
 
-function Section1() {
+function AllProductsList2() {
   return (
     <Container>
       <div className="my-[40px] md:my-[102px] max-md:px-[10px]">
-        <div className="border-b-1 border-[#EDEDED] flex justify-between items-center">
+        <div className="border-b-1 border-[#EDEDED] ">
           <div>
             <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] w-fit">
-              Настенное <span className="text-[#008ECC]">исполнение</span>
+              Напольное <span className="text-[#008ECC]">исполнение</span>
             </h1>
             <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
-          </div>
-          <div className="flex items-center cursor-pointer">
-            <Link
-              to={"/products/Настенное"}
-              className="md:font-medium font-normal max-md:text-[12px]"
-            >
-              Показать все
-            </Link>
-            <img src="/img/right.svg" alt="" />
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 mt-[41px] md:gap-x-[16px] md:gap-y-[84px] gap-2">
@@ -142,4 +238,4 @@ function Section1() {
   );
 }
 
-export default Section1;
+export default AllProductsList2;

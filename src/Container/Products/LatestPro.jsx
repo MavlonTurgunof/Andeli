@@ -54,7 +54,7 @@ function LatestPro() {
           </div>
           <div className="flex items-center cursor-pointer">
             <Link
-              to={"/products/allproducts"}
+              to={"/products"}
               className="md:font-medium font-normal max-md:text-[12px] "
             >
               Показать все

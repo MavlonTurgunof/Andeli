@@ -8,6 +8,8 @@ import AppLayout from "../Components/AppLayout";
 import AllProducts from "../../pages/AllProducts";
 import ProductDetailPage from "../../pages/ProductDetailPage";
 import ScrollToTop from "../Components/ScrollToTop";
+import AllProductsList2 from "../Container/Products/AllProductsList2";
+import AllProductsList from "../Container/Products/AllProductsList";
 
 function Index() {
   return (
@@ -18,7 +20,8 @@ function Index() {
           <Route index element={<Home />} />
           <Route path="products" element={<Products />} />
           <Route path="/products/detail" element={<ProductDetailPage />} />
-          <Route path="products/allproducts" element={<AllProducts />} />
+          <Route path="products/Напольное" element={<AllProductsList2 />} />
+          <Route path="products/Настенное" element={<AllProductsList />} />
           <Route path="ai-assistant" element={<AIasistent />} />
           <Route path="contact" element={<Contact />} />
         </Route>

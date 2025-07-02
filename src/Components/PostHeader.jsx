@@ -16,7 +16,7 @@ function PostHeader() {
 
             <input
               type="text"
-              placeholder="Search essentials, groceries and more..."
+              placeholder="Поиск..."
               className="bg-[#F3F9FB] w-[507px] pl-[50px] py-[15px] rounded-[10px] outline-none focus:border-[#008ECC] focus:border-2"
             />
           </div>
