@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -13,40 +13,44 @@ function Form() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycby5jriQopbPR_rUCwjbH4mvua4c9uzuaQ-qtaK05q3leGezr0MKQi0sNhZwP3Uc4hbuBQ/exec";
+      "https://script.google.com/macros/s/AKfycbznMZjTEHsqpJkZmB_TGhdbDBwFUGkQrsgNnjWngU7F4DW1KxTuip-sVy-3XUj91CoTxA/exec";
+
+    const formData = new FormData();
+    formData.append("firstName", form.firstName);
+    formData.append("lastName", form.lastName);
+    formData.append("email", form.email);
+    formData.append("phoneNumber", form.phoneNumber);
+    formData.append("message", form.message);
 
     try {
       setLoading(true);
       const response = await fetch(scriptURL, {
         method: "POST",
-
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(formData).toString(),
+        body: formData,
       });
 
-      toast.success("✅ Muvaffaqiyatli yuborildi");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phoneNumber: "",
-        message: "",
-      });
+      if (response.ok) {
+        setLoading(false);
+        toast.success("✅ Muvaffaqiyatli yuborildi");
+        setTimeout(() => {
+          setForm({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            message: "",
+          });
+        }, 1500);
+      } else {
+        toast.error("❌ Ma'lumotlaringizni yuborishda xatolik yuz berdi");
+      }
     } catch (error) {
+      setLoading(false);
       console.error("Error submitting form:", error);
       toast.error("❌ Ma'lumotlaringizni yuborishda xatolik yuz berdi");
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -63,8 +67,8 @@ function Form() {
           <input
             type="text"
             name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
+            value={form.firstName}
+            onChange={(e) => setForm({ ...form, firstName: e.target.value })}
             required
             className="border-b-1 border-[#8D8D8D] focus:border-blue-400 focus:border-b-2 outline-none"
           />
@@ -79,8 +83,8 @@ function Form() {
           <input
             type="text"
             name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
+            value={form.lastName}
+            onChange={(e) => setForm({ ...form, lastName: e.target.value })}
             required
             className="border-b-1 border-[#8D8D8D] focus:border-blue-400 focus:border-b-2 outline-none"
           />
@@ -95,8 +99,8 @@ function Form() {
           <input
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={form.email}
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
             required
             className="border-b-1 border-[#8D8D8D] focus:border-blue-400 focus:border-b-2 outline-none"
           />
@@ -111,8 +115,8 @@ function Form() {
           <input
             type="text"
             name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
+            value={form.phoneNumber}
+            onChange={(e) => setForm({ ...form, phoneNumber: e.target.value })}
             required
             className="border-b-1 border-[#8D8D8D] focus:border-blue-400 focus:border-b-2 outline-none"
           />
@@ -128,8 +132,8 @@ function Form() {
             type="text"
             name="message"
             placeholder="Напишите свое сообщение..."
-            value={formData.message}
-            onChange={handleChange}
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
             required
             className="border-b-1 border-[#8D8D8D] focus:border-blue-400 focus:border-b-2 outline-none"
           />
