@@ -21,7 +21,7 @@ function Navbar() {
                 }`
               }
             >
-              Home
+              Главная
             </NavLink>
             <NavLink
               to={"/products"}
