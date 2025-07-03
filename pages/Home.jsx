@@ -9,8 +9,8 @@ function Home() {
   return (
     <>
       <Advertisement />
+       <TypePro />
       <ProductList1 />
-      <TypePro />
       <ProductList2 />
       <AiSec />
     </>

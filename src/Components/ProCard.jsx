@@ -17,7 +17,7 @@ function ProCard({ prod }) {
             <h2>{prod.description}</h2>
           </div>
         </div>
-        <h3 className="p-[10px] text-[14px] font-semibold text-[#249B3E]">
+        <h3 className="p-[10px] text-[14px] font-semibold text-[#008ECC]">
           {prod.type}
         </h3>
       </div>

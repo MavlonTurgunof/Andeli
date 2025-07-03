@@ -79,7 +79,7 @@ const data = [
 function ProductList1() {
   return (
     <Container>
-      <div className="my-[40px] md:my-[120px] max-md:px-[10px]">
+      <div className="my-[40px] max-md:px-[10px]">
         <div className="border-b-1 border-[#EDEDED] flex justify-between items-center">
           <div>
             <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] w-fit">
