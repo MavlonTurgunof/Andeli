@@ -4,7 +4,7 @@ import Container from "../../Components/Container";
 const slides = [
   {
     id: 1,
-    img: "/img/Slide1.jpg",
+    img: "/img/Slide1.png",
   },
   {
     id: 2,

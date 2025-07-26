@@ -27,7 +27,7 @@ function Navbar() {
                   }`
                 }
               >
-                All Products
+                Все продукты
               </NavLink>
 
               <NavLink
@@ -38,7 +38,7 @@ function Navbar() {
                   }`
                 }
               >
-                AI Assistant
+                ИИ-помощник
               </NavLink>
               <NavLink
                 to={"/blogs"}
@@ -48,7 +48,7 @@ function Navbar() {
                   }`
                 }
               >
-                Blogs
+                Блоги
               </NavLink>
               <NavLink
                 to={"contact"}
@@ -58,7 +58,7 @@ function Navbar() {
                   }`
                 }
               >
-                Contact Us
+                Связаться с нами
               </NavLink>
               <NavLink
                 to={"/aboutus"}
@@ -68,7 +68,7 @@ function Navbar() {
                   }`
                 }
               >
-                About Us
+                О нас
               </NavLink>
             </div>
             <div className="relative">
@@ -84,7 +84,7 @@ function Navbar() {
                 className="bg-[#FAFAFA] border-2 border-[#FAFAFA] w-[408px] pl-[50px] py-[12px] text-[#939393] text-[16px] rounded-full outline-none focus:border-[#008ECC] focus:border-2"
               />
             </div>
-            <div className="flex justify-center items-center bg-[#FAFAFA] p-[10.5px] rounded-[10px] ">
+            {/* <div className="flex justify-center items-center bg-[#FAFAFA] p-[10.5px] rounded-[10px] ">
               <img
                 src="/img/en.png"
                 alt=""
@@ -92,7 +92,7 @@ function Navbar() {
               />
               <h1 className="text-14px font-medium mr-[6.75px]">English</h1>
               <FaAngleDown />
-            </div>
+            </div> */}
           </div>
         </Container>
       </div>
@@ -137,11 +137,11 @@ function Navbar() {
           {/* Navigation Links */}
           <nav className="flex flex-col items-start px-8 py-4 space-y-4">
             {[
-              { to: "/", label: "Home" },
-              { to: "/ai-assistant", label: "AI Asistent" },
-              { to: "/blogs", label: "Blogs" },
-              { to: "/contact", label: "Contact Us" },
-              { to: "/aboutus", label: "About Us" },
+              { to: "/", label: "Все продукты" },
+              { to: "/ai-assistant", label: "ИИ-помощник" },
+              { to: "/blogs", label: "Блоги" },
+              { to: "/contact", label: "Связаться с нами" },
+              { to: "/aboutus", label: "О нас" },
             ].map(({ to, label }) => (
               <NavLink
                 key={to}

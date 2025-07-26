@@ -6,67 +6,51 @@ import { Link } from "react-router-dom";
 const data = [
   {
     id: 1,
-    image: "/Blogs/img1.svg",
+    image: "/Blogs/img1.jpg",
     date: "Июль 14, 2025 • 11 min",
-    title: "Для каких целей используется стабилизатор напряжений?",
+    title: "Что такое стабилизатор ANDELI SDW-D5000VA и где он применяется?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Модель SDW-D5000VA предназначена для защиты бытовой техники от скачков напряжения. Благодаря настенному монтажу и компактному дизайну, идеально подходит для квартир и офисов. Обеспечивает стабильные 220В при работе с чувствительной электроникой.",
   },
   {
     id: 2,
-    image: "/Blogs/img2.svg",
+    image: "/Blogs/img2.jpg",
     date: "Июль 15, 2025 • 15 min",
-    title: "Почему настенные стабилизаторы безопасные?",
+    title: "Преимущества модели стабилизатора ANDELI SVC-D5000OVA V",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Эта модель оснащена цифровым дисплеем и удобной индикацией, что позволяет контролировать параметры сети в реальном времени. Подходит для электроприборов мощностью до 5000 ВА. Эффективно стабилизирует напряжение в нестабильных электросетях.",
   },
   {
     id: 3,
-    image: "/Blogs/img3.svg",
+    image: "/Blogs/img3.jpg",
     date: "Июль 16, 2025 • 20 min",
-    title: "Меры безопасность при использовании стабилизаторов",
+    title: "Стабилизатор ANDELI SVC-D20000VA — надёжная защита для всего дома",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Высокомощный стабилизатор на 20 000 ВА. Используется в частных домах, мастерских и небольших производствах. Защищает всю проводку и подключённую технику от перенапряжения и просадок в сети. Имеет надёжную напольную конструкцию.",
   },
   {
     id: 4,
-    image: "/Blogs/img4.svg",
+    image: "/Blogs/img4.jpg",
     date: "Июль 14, 2025 • 11 min",
-    title: "Для каких целей используется стабилизатор напряжений?",
+    title: "Почему стоит выбрать ANDELI SVC-D5000VA для дома или офиса?",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Компактный и мощный стабилизатор на 5000 ВА, идеально подходит для офисной и бытовой техники. Устройство автоматически регулирует входное напряжение, защищая оборудование от повреждений.",
   },
   {
     id: 5,
-    image: "/Blogs/img9.svg",
+    image: "/Blogs/img5.jpg",
     date: "Июль 16, 2025 • 20 min",
-    title: "Меры безопасность при использовании стабилизаторов",
+    title: "ANDELI SDW-D10000VA — надёжность при большой нагрузке",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Настенный стабилизатор SDW-D10000VA с двойной системой защиты предназначен для работы с нагрузками до 10 000 ВА. Подходит для больших квартир, частных домов и серверных помещений. Легко крепится на стену и не занимает место.",
   },
   {
     id: 6,
-    image: "/Blogs/img6.svg",
+    image: "/Blogs/img6.jpg",
     date: "Июль 15, 2025 • 15 min",
-    title: "Почему настенные стабилизаторы безопасные?",
+    title: "Стабилизатор ANDELI SVC-D75000VA-3 — решение для трёхфазной сети",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
-  },
-  {
-    id: 7,
-    image: "/Blogs/img7.svg",
-    date: "Июль 15, 2025 • 15 min",
-    title: "Почему настенные стабилизаторы безопасные?",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
-  },
-  {
-    id: 8,
-    image: "/Blogs/img8.svg",
-    date: "Июль 14, 2025 • 11 min",
-    title: "Меры безопасность при использовании стабилизаторов",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam mollis lectus vitae nulla malesuada amet purus sed. A condimentum tempus a egestas sodales diam cras.",
+      "Мощный трёхфазный стабилизатор на 75 000 ВА предназначен для промышленных объектов и крупных предприятий. Обеспечивает стабильное напряжение 380V даже при серьёзных колебаниях в сети. Отличается высокой надёжностью и долговечностью.",
   },
 ];
 
@@ -83,7 +67,7 @@ function BlogsMain() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] sm:gap-[32px] lg:gap-y-[48px] pt-[40px] sm:pt-[60px] lg:pt-[84px] px-4 sm:px-6 lg:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] sm:gap-[32px] lg:gap-y-[48px] py-[40px] sm:py-[60px] lg:pt-[84px] px-4 sm:px-6 lg:px-0">
           {data.map((blog) => (
             <BlogCard data={blog} />
           ))}

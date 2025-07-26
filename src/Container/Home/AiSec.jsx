@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import Container from "../../Components/Container";
+import Lottie from "lottie-react";
+import Loading from "../../assets/AILoading.json";
 
 function AiSec() {
   const [question, setQuestion] = useState("");
@@ -68,89 +70,65 @@ function AiSec() {
 
         {/* CONTENT */}
         <div className="">
-          {/* Show initial questions or chat messages */}
-          {chatHistory.length === 0 ? (
-            <div className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center  rounded-b-[14px]">
-              <h2 className="text-lg md:text-xl font-semibold mb-4">
-                Часто задаваемые вопросы:
-              </h2>
-
-              <div className="flex flex-col gap-2 w-fit max-w-sm">
-                {[
-                  "Что такое стабилизатор?",
-                  "Чем отличаются стабилизаторы напольные и настенные?",
-                  "Чем отличаются стабилизаторы напольные и настенные?",
-                  "Чем отличаются стабилизаторы напольные и настенные?",
-                  "Чем отличаются стабилизаторы напольные и настенные?",
-                ].map((q, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      setQuestion(q);
-                      handleAsk(); // trigger chat
-                    }}
-                    className="bg-[#FDEDC7] text-left p-2 rounded-md shadow-sm hover:bg-[#fcdca0] transition"
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-
-              <button
-                onClick={() => {
-                  setQuestion("Привет!"); // start basic chat
-                  handleAsk();
-                }}
-                className="mt-6 text-sm text-gray-600 hover:text-gray-800 underline"
-              >
-                Перейти в чат →
-              </button>
-            </div>
-          ) : (
-            <div>
-              <div className="flex flex-col h-[80vh] px-4 pt-4 overflow-y-auto space-y-4">
-                {chatHistory.map((msg, idx) => (
-                  <div className="flex items-end gap-[10px]">
-                    {msg.role === "ai" && (
-                      <div className="h-[32px] w-[32px] rounded-full flex items-center justify-center bg-[#0067B3]">
-                        <img
-                          src="/img/AIButton.svg"
-                          alt=""
-                          className="w-[21.36px] h-[15.56px]"
-                        />
+          <div>
+            <div className="flex flex-col h-[80vh] px-4 pt-4 overflow-y-auto space-y-4">
+              {chatHistory?.length === 0 ? (
+                <div className="flex items-center justify-center flex-col">
+                  <Lottie
+                    animationData={Loading}
+                    loop
+                    autoplay
+                    className="h-[300px] w-[300px] "
+                  />
+                  <h1 className="text-[24px] font-semibold text-[#0369A1]">
+                    Чат с ИИ-ассистентом
+                  </h1>
+                </div>
+              ) : (
+                <div>
+                  {chatHistory.map((msg, idx) => (
+                    <div className="flex items-end gap-[10px]">
+                      {msg.role === "ai" && (
+                        <div className="h-[32px] w-[32px] rounded-full flex items-center justify-center bg-[#0067B3]">
+                          <img
+                            src="/img/AIButton.svg"
+                            alt=""
+                            className="w-[21.36px] h-[15.56px]"
+                          />
+                        </div>
+                      )}
+                      <div
+                        key={idx}
+                        className={`max-w-[75%] rounded-lg px-4 py-2 text-sm ${
+                          msg.role === "user"
+                            ? "ml-auto bg-[#FDEDC7] text-right"
+                            : "mr-auto bg-gray-100"
+                        }`}
+                      >
+                        {msg.text}
                       </div>
-                    )}
-                    <div
-                      key={idx}
-                      className={`max-w-[75%] rounded-lg px-4 py-2 text-sm ${
-                        msg.role === "user"
-                          ? "ml-auto bg-[#FDEDC7] text-right"
-                          : "mr-auto bg-gray-100"
-                      }`}
-                    >
-                      {msg.text}
                     </div>
-                  </div>
-                ))}
-                {loading && (
-                  <div className="mr-auto text-sm text-gray-500">
-                    AI is typing...
-                  </div>
-                )}
-                <div ref={messagesEndRef} />
-              </div>
-              <div className="w-full flex items-center gap-2 border-t-1 border-gray-300 ">
-                <input
-                  type="text"
-                  placeholder="Напишите ..."
-                  value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  className="w-full rounded-md px-[22px] md:py-[26px] py-[18px] text-sm focus:outline-none "
-                />
-              </div>
+                  ))}
+                </div>
+              )}
+              {loading && (
+                <div className="mr-auto text-sm text-gray-500">
+                  AI is typing...
+                </div>
+              )}
+              <div ref={messagesEndRef} />
             </div>
-          )}
+            <div className="w-full flex items-center gap-2 border-t-1 border-gray-300 ">
+              <input
+                type="text"
+                placeholder="Напишите ..."
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                onKeyPress={handleKeyPress}
+                className="w-full rounded-md px-[22px] md:py-[26px] py-[18px] text-sm focus:outline-none "
+              />
+            </div>
+          </div>
         </div>
       </div>
     </Container>
