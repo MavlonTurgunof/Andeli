@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Container from "./Container";
 import { XIcon } from "../../public/icon";
 import { BiDownArrow } from "react-icons/bi";
@@ -14,9 +14,9 @@ function Navbar() {
         <Container>
           <div className="flex flex-row justify-between items-center py-[20px]">
             <div>
-              <div className="flex items-center  gap-[208px]">
+              <Link to={"/"} className="flex items-center  gap-[208px]">
                 <img src="/img/Logo.svg" alt="" className="" />
-              </div>
+              </Link>
             </div>
             <div className="sticky flex gap-[18px] justify-center items-center ">
               <NavLink
@@ -80,7 +80,7 @@ function Navbar() {
 
               <input
                 type="text"
-                placeholder="Search for products..."
+                placeholder="Поиск товаров..."
                 className="bg-[#FAFAFA] border-2 border-[#FAFAFA] w-[408px] pl-[50px] py-[12px] text-[#939393] text-[16px] rounded-full outline-none focus:border-[#008ECC] focus:border-2"
               />
             </div>
@@ -101,7 +101,9 @@ function Navbar() {
 
       <div className="md:hidden py-2 border-b border-[#EDEDED]">
         <div className="flex justify-between items-center px-4">
-          <img src="/img/Logo.svg" alt="Logo" />
+          <Link to={"/"}>
+            <img src="/img/Logo.svg" alt="Logo" />
+          </Link>
           <button
             className="bg-[#0067B3] p-2 rounded-xl"
             onClick={() => setMobileMenuOpen(true)}

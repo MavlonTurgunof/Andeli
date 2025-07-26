@@ -174,7 +174,7 @@ function ProductList1() {
           >
             <div className="flex items-center gap-[8px]">
               <img src="/img/Vector.svg" alt="" className="h-[24px] w-[24px]" />
-              <h1 className="text-[20px] font-normal">Filters</h1>
+              <h1 className="text-[20px] font-normal">Фильтры</h1>
             </div>
             <FaAngleDown className="" />
           </button>
@@ -185,7 +185,7 @@ function ProductList1() {
                   onClick={clearAll}
                   className="max-md:hidden flex items-center justify-center gap-[12px] py-[11px] px-[36px] mt-[12px] rounded-[8px] bg-[#FFE0E0]"
                 >
-                  <h1 className="text-[14px] font-normal">Clear Filter</h1>
+                  <h1 className="text-[14px] font-normal">Очистить фильтр</h1>
                   <RxCross2 />
                 </button>
               ))}
@@ -258,7 +258,7 @@ function ProductList1() {
                   onClick={clearAll}
                   className="flex items-center justify-center gap-[12px] py-[11px] w-full mt-[12px] rounded-[8px] bg-[#FFE0E0]"
                 >
-                  <h1 className="text-[14px] font-normal">Clear Filter</h1>
+                  <h1 className="text-[14px] font-normal">Очистить фильтр</h1>
                   <RxCross2 />
                 </button>
               </div>

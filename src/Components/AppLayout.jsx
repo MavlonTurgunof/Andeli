@@ -8,7 +8,6 @@ import Footer from "./Footer";
 function AppLayout() {
   return (
     <>
-      <Header />
       <Navbar />
       <Outlet />
       <Footer />

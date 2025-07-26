@@ -86,7 +86,7 @@ function DetailModal({ setIsOpenModal }) {
                 Позвонить +998 99 999 99 99
               </button>
               <button className="w-full text-[16px] font-normal text-[#666666] py-[14px] bg-[#FAFAFA]  rounded-[14px]">
-                Contact Us
+                Связаться с нами
               </button>
             </div>
           </div>

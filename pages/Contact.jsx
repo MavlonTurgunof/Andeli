@@ -18,7 +18,7 @@ function Contact() {
             {/* Email & Working Hours */}
             <div className="">
               <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
-                EMAIL ADDRESS
+                АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ
               </h2>
               <h3 className="text-[14px] sm:text-[16px] font-bold mb-4">
                 andeli@gmail.com
@@ -48,7 +48,7 @@ function Contact() {
             {/* Phone & Address */}
             <div className="">
               <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
-                NUMBER
+                НОМЕР
               </h2>
               <h3 className="text-[14px] sm:text-[16px] font-bold mb-4">
                 +998 97 773 98 99
@@ -60,7 +60,7 @@ function Contact() {
                   <br /> shirin kòchasi 125
                 </p>
                 <p>
-                  <span className="font-bold">Do'kon:</span> Jomiy 13 B
+                  <span className="font-bold">Магазин:</span> Jomiy 13 B
                 </p>
               </div>
             </div>

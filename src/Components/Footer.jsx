@@ -23,8 +23,8 @@ function Footer() {
                 className="w-full max-w-[150px]"
               />
               <p className="text-sm sm:text-[14px] text-black/60 mt-6 mb-6 leading-relaxed">
-                We have clothes that suit your style and which you’re proud to
-                wear. From women to men.
+                У нас есть одежда, которая соответствует вашему стилю и которую
+                вы будете носить с гордостью. Как женская, так и мужская.
               </p>
               <div className="flex gap-3">
                 {[FaTwitter, FaFacebook, FaInstagram, FaGithub].map(
@@ -41,18 +41,20 @@ function Footer() {
             </div>
 
             <div className="">
-              <h1 className="text-base font-medium mb-6">COMPANY</h1>
+              <h1 className="text-base font-medium mb-6">КОМПАНИЯ</h1>
               <div className="flex flex-col gap-3 text-sm sm:text-[16px] text-black/60">
-                <Link to="/">All Products</Link>
-                <Link to="/">AI Assistant</Link>
-                <Link to="/blogs">Blogs</Link>
-                <Link to="/about-us">About Us</Link>
+                <Link to="/">Все продукты</Link>
+                <Link to="/">ИИ-помощник</Link>
+                <Link to="/blogs">Блоги</Link>
+                <Link to="/about-us">О нас</Link>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-10 lg:gap-[64px]">
               <div>
-                <h1 className="text-base font-medium mb-6">EMAIL ADDRESS</h1>
+                <h1 className="text-base font-medium mb-6">
+                  АДРЕС ЭЛЕКТРОННОЙ ПОЧТЫ
+                </h1>
                 <p className="text-sm sm:text-base font-bold mb-4">
                   andeli@gmail.com
                 </p>
@@ -80,7 +82,7 @@ function Footer() {
 
               {/* Phone & Address */}
               <div>
-                <h1 className="text-base font-medium mb-6">NUMBER</h1>
+                <h1 className="text-base font-medium mb-6">НОМЕР</h1>
                 <p className="text-sm sm:text-base font-bold mb-4">
                   +998 97 773 98 99
                 </p>
@@ -91,7 +93,7 @@ function Footer() {
                     shirin kòchasi 125
                   </p>
                   <p>
-                    <span className="font-bold">Do'kon:</span> Jomiy 13 B
+                    <span className="font-bold">Магазин:</span> Jomiy 13 B
                   </p>
                 </div>
               </div>
@@ -99,7 +101,7 @@ function Footer() {
           </div>
 
           <p className="text-sm sm:text-[14px] text-black/60 mt-6 pb-20">
-            Shop.co © 2000-2023, All Rights Reserved
+            Shop.co © 2000-2023, Все права защищены
           </p>
         </div>
       </Container>
