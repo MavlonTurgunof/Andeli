@@ -14,7 +14,7 @@ function Contact() {
             Andeli и слоган (текст)
           </h1>
 
-          <div className="flex flex-col sm:flex-row gap-10 lg:gap-[64px] w-full">
+          <div className="flex flex-col sm:flex-row gap-10 lg:gap-[64px] ">
             {/* Email & Working Hours */}
             <div className="">
               <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
