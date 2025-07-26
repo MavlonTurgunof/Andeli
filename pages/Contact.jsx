@@ -16,7 +16,7 @@ function Contact() {
 
           <div className="flex flex-col sm:flex-row gap-10 lg:gap-[64px] w-full">
             {/* Email & Working Hours */}
-            <div className="flex-1">
+            <div className="">
               <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
                 EMAIL ADDRESS
               </h2>
@@ -46,7 +46,7 @@ function Contact() {
             </div>
 
             {/* Phone & Address */}
-            <div className="flex-1">
+            <div className="">
               <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
                 NUMBER
               </h2>
