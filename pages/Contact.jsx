@@ -1,89 +1,81 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "../src/Components/Container";
-import ContactInfo from "../src/Container/Contact/ContactInfo";
-import Form from "../src/Container/Contact/Form";
-
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Modal from "../src/Container/Contact/Modal";
 
 function Contact() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [status, setStatus] = useState("");
-  const [text, setText] = useState("");
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-  });
-
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbznMZjTEHsqpJkZmB_TGhdbDBwFUGkQrsgNnjWngU7F4DW1KxTuip-sVy-3XUj91CoTxA/exec";
-
-    const formData = new FormData();
-    formData.append("firstName", form.firstName);
-    formData.append("lastName", form.lastName);
-    formData.append("email", form.email);
-    formData.append("phoneNumber", form.phoneNumber);
-    formData.append("message", form.message);
-
-    try {
-      setLoading(true);
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        setIsModalOpen(true);
-        setLoading(false);
-        setStatus("success");
-        setText("Отправлено успешно!");
-        setTimeout(() => {
-          setForm({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phoneNumber: "",
-            message: "",
-          });
-        }, 1500);
-      }
-    } catch (error) {
-      setLoading(false);
-      setStatus("fail");
-      setText("При отправке вашей информации произошла ошибка!");
-      setIsModalOpen(true);
-      console.log(error);
-    }
-  };
-
   return (
-    <div className="bg-[#F5F5F5] md:pb-[125px] md:pt-[31px]">
-      <Container>
-        <div className="rounded-[10px] p-[10px] flex md:flex-row flex-col bg-white max-md:py-[20px]">
-          <ContactInfo />
-          <Form
-            handleSubmit={handleSubmit}
-            form={form}
-            setForm={setForm}
-            loading={loading}
-          />
-          <Modal
-            isModalOpen={isModalOpen}
-            status={status}
-            text={text}
-            setIsModalOpen={setIsModalOpen}
-          />
+    <Container>
+      <div className="my-8 px-4 sm:px-6 lg:px-0">
+        <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] mb-5 font-normal">
+          Контакная информация
+        </h1>
+
+        <div className="flex flex-col lg:flex-row items-start justify-between py-8 px-6 sm:px-10 lg:px-16 bg-[#FAFAFA] rounded-[14px] gap-10 mb-5">
+          <h1 className="text-[#0067B3] text-[28px] sm:text-[36px] lg:text-[56px] font-bold leading-tight">
+            Andeli и слоган (текст)
+          </h1>
+
+          <div className="flex flex-col sm:flex-row gap-10 lg:gap-[64px] w-full">
+            {/* Email & Working Hours */}
+            <div className="flex-1">
+              <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
+                EMAIL ADDRESS
+              </h2>
+              <h3 className="text-[14px] sm:text-[16px] font-bold mb-4">
+                andeli@gmail.com
+              </h3>
+              <div className="flex gap-6 text-sm sm:text-[16px] text-[#434343]">
+                <div className="space-y-1">
+                  <p>Понедельник</p>
+                  <p>Вторник</p>
+                  <p>Среда</p>
+                  <p>Четверг</p>
+                  <p>Пятница</p>
+                  <p>Суббота</p>
+                  <p>Воскресенье</p>
+                </div>
+                <div className="space-y-1">
+                  <p>с 6:00 по 16:00</p>
+                  <p>с 6:00 по 16:00</p>
+                  <p>с 6:00 по 16:00</p>
+                  <p>с 6:00 по 16:00</p>
+                  <p>с 6:00 по 16:00</p>
+                  <p>с 6:00 по 14:00</p>
+                  <p>-</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Phone & Address */}
+            <div className="flex-1">
+              <h2 className="text-[14px] sm:text-[16px] font-medium mb-6">
+                NUMBER
+              </h2>
+              <h3 className="text-[14px] sm:text-[16px] font-bold mb-4">
+                +998 97 773 98 99
+              </h3>
+              <div className="text-sm sm:text-[16px] font-normal text-black/60 space-y-2">
+                <p>
+                  <span className="font-bold">Адрес:</span> Toshkent shaxar,
+                  Usta
+                  <br /> shirin kòchasi 125
+                </p>
+                <p>
+                  <span className="font-bold">Do'kon:</span> Jomiy 13 B
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </Container>
-    </div>
+
+        {/* Map Section */}
+        <div>
+          <h1 className="text-[24px] sm:text-[28px] lg:text-[32px] mt-8 mb-5 font-normal">
+            Локация
+          </h1>
+          <img src="/img/Map.svg" alt="Map" className="w-full rounded-md" />
+        </div>
+      </div>
+    </Container>
   );
 }
 

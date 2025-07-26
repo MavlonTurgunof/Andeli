@@ -1,27 +1,28 @@
 import React from "react";
+import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-function ProCard({ prod }) {
+function ProCard({ prod, setIsOpenModal }) {
   return (
-    <Link
-      to={"/products/detail"}
-      className=" rounded-[16px] border-1 border-[#EDEDED] hover:shadow-2xl hover:scale-105 hover:transition-all cursor-pointer"
+    <div
+      onClick={() => setIsOpenModal(true)}
+      className="max-w-[250px] max-h-[356px] rounded-[16px] border-1 border-[#EDEDED] hover:shadow-2xl hover:scale-105 hover:transition-all cursor-pointer"
     >
-      <div className="bg-[#F5F5F5] h-[187px] flex justify-center items-center rounded-t-[16px]">
-        <img src={`${prod.image}`} alt="" className="w-[150px] h-[150px]" />
+      <div className="bg-[#F0EEED] h-[180px] md:h-[280px] flex justify-center items-center rounded-t-[16px]">
+        <img src={`${prod.image}`} alt="" className="w-[178px] h-[271px]" />
       </div>
-      <div>
-        <div className="border-b-1 border-[#EDEDED]">
-          <div className="p-[12px] font-semibold text-[14px]">
-            <h1>{prod.name}</h1>
-            <h2>{prod.description}</h2>
-          </div>
-        </div>
-        <h3 className="p-[10px] text-[14px] font-semibold text-[#008ECC]">
+      <div className="py-[14px] px-[9px]">
+        <h3
+          className={` text-[14px] font-semibold ${
+            prod.type === "Настенный" ? "text-[#008ECC]" : "text-[#F5A623]"
+          } `}
+        >
           {prod.type}
         </h3>
+
+        <h1 className="md:text-[20px] text-[14px] font-normal ">{prod.name}</h1>
       </div>
-    </Link>
+    </div>
   );
 }
 

@@ -60,7 +60,7 @@ function Advertisement() {
                 className={`transition-all duration-300 ${
                   idx === currentIndex
                     ? "w-6 h-2 rounded-full bg-white"
-                    : "w-2 h-2 rounded-full bg-white/70"
+                    : "w-2 h-2 rounded-full bg-[#0067B3]"
                 }`}
               ></span>
             ))}

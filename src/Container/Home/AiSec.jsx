@@ -55,75 +55,102 @@ function AiSec() {
 
   return (
     <Container>
-      <div className="my-8 px-4 md:px-0">
-        <div className="border-b-1 border-[#EDEDED]">
-          <h1 className="text-[#666666] text-[18px] font-semibold md:text-[24px] md:font-bold max-md:border-b-2 max-md:border-[#008ECC] max-md:w-fit">
-            AI <span className="text-[#008ECC]">Помощник</span>
-          </h1>
-          <div className="bg-[#008ECC] h-[3px] w-[378px] max-md:hidden" />
+      <div className="flex flex-col bg-[#FAFAFA] shadow-md overflow-hidden my-[32px] rounded-[14px] max-md:mx-[10px]">
+        {/* HEADER */}
+        <div className="bg-[#0369A1] p-[20px] text-[#F8F8F8] font-light md:text-[15px] text-[12px] flex items-center gap-2 rounded-t-[14px]">
+          <img
+            src="/img/AILogo.svg"
+            className="md:w-[40px] md:h-[40px] w-[30px] h-[30px]"
+            alt="Logo"
+          />
+          Andeli ИИ Ассистент
         </div>
 
-        <div className="bg-[#CFE3F0] h-[80vh] md:h-[557px] rounded-[16px] flex justify-center md:mt-[40px] mt-[10px]">
-          <div className="flex flex-col justify-between w-full max-w-[600px] px-4 py-6">
-            {/* Chat History */}
-            <div className="flex flex-col gap-4 overflow-auto max-h-[60vh] pr-2">
-              {chatHistory.length === 0 && !loading && (
-                <img
-                  src="/img/AIAsistent.svg"
-                  alt="AI Assistant"
-                  className="mx-auto w-[150px] md:w-[200px] mt-[80px] "
-                />
-              )}
+        {/* CONTENT */}
+        <div className="">
+          {/* Show initial questions or chat messages */}
+          {chatHistory.length === 0 ? (
+            <div className="flex flex-col items-center justify-center min-h-[80vh] px-4 text-center  rounded-b-[14px]">
+              <h2 className="text-lg md:text-xl font-semibold mb-4">
+                Часто задаваемые вопросы:
+              </h2>
 
-              {chatHistory.map((msg, idx) => (
-                <div
-                  key={idx}
-                  className={`flex items-start gap-4 ${
-                    msg.role === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
-                  {msg.role === "ai" && (
-                    <img
-                      src="/img/AIAsistent.svg"
-                      alt="AI"
-                      className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
-                    />
-                  )}
-                  <p
-                    className={`p-3 rounded-[12px] max-w-[80%] break-words ${
-                      msg.role === "user"
-                        ? "bg-[#008ECC] text-white"
-                        : "bg-white text-[#333]"
-                    }`}
+              <div className="flex flex-col gap-2 w-fit max-w-sm">
+                {[
+                  "Что такое стабилизатор?",
+                  "Чем отличаются стабилизаторы напольные и настенные?",
+                  "Чем отличаются стабилизаторы напольные и настенные?",
+                  "Чем отличаются стабилизаторы напольные и настенные?",
+                  "Чем отличаются стабилизаторы напольные и настенные?",
+                ].map((q, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setQuestion(q);
+                      handleAsk(); // trigger chat
+                    }}
+                    className="bg-[#FDEDC7] text-left p-2 rounded-md shadow-sm hover:bg-[#fcdca0] transition"
                   >
-                    {msg.text}
-                  </p>
-                </div>
-              ))}
+                    {q}
+                  </button>
+                ))}
+              </div>
 
-              {loading && <p className="text-gray-700">AI is typing...</p>}
-
-              <div ref={messagesEndRef} />
-            </div>
-
-            {/* Input */}
-            <div className="flex gap-2 mt-4">
-              <input
-                type="text"
-                placeholder="Давайте поговорим"
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-                onKeyDown={handleKeyPress}
-                className="p-3 rounded-[12px] bg-white w-full text-sm outline-none focus:border-2 focus:border-[#008ECC]"
-              />
               <button
-                onClick={handleAsk}
-                className="p-3 rounded-[12px] bg-[#0067B3]"
+                onClick={() => {
+                  setQuestion("Привет!"); // start basic chat
+                  handleAsk();
+                }}
+                className="mt-6 text-sm text-gray-600 hover:text-gray-800 underline"
               >
-                <img src="/img/SendBtn.svg" alt="Send" className="w-6 h-6" />
+                Перейти в чат →
               </button>
             </div>
-          </div>
+          ) : (
+            <div>
+              <div className="flex flex-col h-[80vh] px-4 pt-4 overflow-y-auto space-y-4">
+                {chatHistory.map((msg, idx) => (
+                  <div className="flex items-end gap-[10px]">
+                    {msg.role === "ai" && (
+                      <div className="h-[32px] w-[32px] rounded-full flex items-center justify-center bg-[#0067B3]">
+                        <img
+                          src="/img/AIButton.svg"
+                          alt=""
+                          className="w-[21.36px] h-[15.56px]"
+                        />
+                      </div>
+                    )}
+                    <div
+                      key={idx}
+                      className={`max-w-[75%] rounded-lg px-4 py-2 text-sm ${
+                        msg.role === "user"
+                          ? "ml-auto bg-[#FDEDC7] text-right"
+                          : "mr-auto bg-gray-100"
+                      }`}
+                    >
+                      {msg.text}
+                    </div>
+                  </div>
+                ))}
+                {loading && (
+                  <div className="mr-auto text-sm text-gray-500">
+                    AI is typing...
+                  </div>
+                )}
+                <div ref={messagesEndRef} />
+              </div>
+              <div className="w-full flex items-center gap-2 border-t-1 border-gray-300 ">
+                <input
+                  type="text"
+                  placeholder="Напишите ..."
+                  value={question}
+                  onChange={(e) => setQuestion(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  className="w-full rounded-md px-[22px] md:py-[26px] py-[18px] text-sm focus:outline-none "
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </Container>

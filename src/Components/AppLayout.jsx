@@ -9,7 +9,6 @@ function AppLayout() {
   return (
     <>
       <Header />
-      <PostHeader />
       <Navbar />
       <Outlet />
       <Footer />

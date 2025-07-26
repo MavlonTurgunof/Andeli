@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Container from "./Container";
 import { XIcon } from "../../public/icon";
+import { BiDownArrow } from "react-icons/bi";
+import { FaAngleDown } from "react-icons/fa";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,55 +12,87 @@ function Navbar() {
     <div>
       <div className="max-md:hidden border-b-1 border-[#EDEDED] ">
         <Container>
-          <div className="sticky flex gap-[18px] justify-center items-center py-[16px]">
-            <NavLink
-              to={"/"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-            >
-              Главная
-            </NavLink>
-            <NavLink
-              to={"/products"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px] rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-            >
-              Продукты
-            </NavLink>
-            <NavLink
-              to={"ai-assistant"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px] rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-            >
-              AI Помощник
-            </NavLink>
-            <NavLink
-              to={"contact"}
-              className={({ isActive }) =>
-                `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-medium ${
-                  isActive
-                    ? "bg-[#0067B3] text-white"
-                    : "bg-[#F3F9FB] text-black"
-                }`
-              }
-            >
-              Контакты
-            </NavLink>
+          <div className="flex flex-row justify-between items-center py-[20px]">
+            <div>
+              <div className="flex items-center  gap-[208px]">
+                <img src="/img/Logo.svg" alt="" className="" />
+              </div>
+            </div>
+            <div className="sticky flex gap-[18px] justify-center items-center ">
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-regular ${
+                    isActive ? " text-[#0067B3]" : "text-[#939393]"
+                  }`
+                }
+              >
+                All Products
+              </NavLink>
+
+              <NavLink
+                to={"ai-assistant"}
+                className={({ isActive }) =>
+                  `py-[9px] px-[14px] rounded-[18px] text-[14px] font-regular ${
+                    isActive ? " text-[#0067B3]" : "text-[#939393]"
+                  }`
+                }
+              >
+                AI Assistant
+              </NavLink>
+              <NavLink
+                to={"/blogs"}
+                className={({ isActive }) =>
+                  `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-regular ${
+                    isActive ? " text-[#0067B3]" : "text-[#939393]"
+                  }`
+                }
+              >
+                Blogs
+              </NavLink>
+              <NavLink
+                to={"contact"}
+                className={({ isActive }) =>
+                  `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-regular ${
+                    isActive ? " text-[#0067B3]" : "text-[#939393]"
+                  }`
+                }
+              >
+                Contact Us
+              </NavLink>
+              <NavLink
+                to={"/aboutus"}
+                className={({ isActive }) =>
+                  `py-[9px] px-[14px]  rounded-[18px] text-[14px] font-regular ${
+                    isActive ? " text-[#0067B3]" : "text-[#939393]"
+                  }`
+                }
+              >
+                About Us
+              </NavLink>
+            </div>
+            <div className="relative">
+              <img
+                src="/img/Search.svg"
+                alt=""
+                className="absolute h-[24px] w-[24px] top-[14px] left-[16px]"
+              />
+
+              <input
+                type="text"
+                placeholder="Search for products..."
+                className="bg-[#FAFAFA] border-2 border-[#FAFAFA] w-[408px] pl-[50px] py-[12px] text-[#939393] text-[16px] rounded-full outline-none focus:border-[#008ECC] focus:border-2"
+              />
+            </div>
+            <div className="flex justify-center items-center bg-[#FAFAFA] p-[10.5px] rounded-[10px] ">
+              <img
+                src="/img/en.png"
+                alt=""
+                className="h-[27px] w-[27px] mr-[3.5px]"
+              />
+              <h1 className="text-14px font-medium mr-[6.75px]">English</h1>
+              <FaAngleDown />
+            </div>
           </div>
         </Container>
       </div>
@@ -86,7 +120,7 @@ function Navbar() {
 
         {/* Slide-in Menu */}
         <div
-          className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-50 shadow-lg transform transition-transform duration-300 ${
+          className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-100 shadow-lg transform transition-transform duration-300 ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           } rounded-tl-3xl`}
         >
@@ -104,9 +138,10 @@ function Navbar() {
           <nav className="flex flex-col items-start px-8 py-4 space-y-4">
             {[
               { to: "/", label: "Home" },
-              { to: "/products", label: "Продукты" },
-              { to: "/ai-assistant", label: "AI Помощник" },
-              { to: "/contact", label: "Контакты" },
+              { to: "/ai-assistant", label: "AI Asistent" },
+              { to: "/blogs", label: "Blogs" },
+              { to: "/contact", label: "Contact Us" },
+              { to: "/aboutus", label: "About Us" },
             ].map(({ to, label }) => (
               <NavLink
                 key={to}
