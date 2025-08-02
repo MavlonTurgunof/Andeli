@@ -53,13 +53,13 @@ function Advertisement() {
               <img src="/img/right.svg" alt="" />
             </button>
           </div>
-          <div className="absolute bottom-[39px] left-[90px] flex items-center gap-2">
+          <div className="absolute bottom-[49px] left-[90px] flex items-center gap-2">
             {slides.map((_, idx) => (
               <span
                 key={idx}
                 className={`transition-all duration-300 ${
                   idx === currentIndex
-                    ? "w-6 h-2 rounded-full bg-white"
+                    ? "w-6 h-2 rounded-full bg-[#E3E3E3]"
                     : "w-2 h-2 rounded-full bg-[#0067B3]"
                 }`}
               ></span>

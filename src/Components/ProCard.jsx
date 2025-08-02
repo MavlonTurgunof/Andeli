@@ -6,10 +6,10 @@ function ProCard({ prod, setIsOpenModal }) {
   return (
     <div
       onClick={() => setIsOpenModal(true)}
-      className="max-w-[250px] max-h-[356px] rounded-[16px] border-1 border-[#EDEDED] hover:shadow-2xl hover:scale-105 hover:transition-all cursor-pointer"
+      className="max-w-[250px] md:w-[250px] max-h-[356px] rounded-[16px] border-1 border-[#EDEDED] hover:shadow-2xl hover:scale-105 hover:transition-all cursor-pointer"
     >
       <div className="bg-[#F0EEED] h-[180px] md:h-[280px] flex justify-center items-center rounded-t-[16px]">
-        <img src={`${prod.image}`} alt="" className="w-[178px] h-[271px]" />
+        <img src={`${prod.image}`} alt="" className="w-[90%] h-[90%]" />
       </div>
       <div className="py-[14px] px-[9px]">
         <h3

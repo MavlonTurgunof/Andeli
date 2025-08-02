@@ -7,89 +7,22 @@ import { RxCross2 } from "react-icons/rx";
 import DetailModal from "./DetailModal";
 import AIChatModal from "./AIModal";
 import { SlArrowDown } from "react-icons/sl";
+import { products } from "../../../Data/Data";
 
 const mountTypes = ["Напольный", "Настенный"];
 const powerOptions = [
+  "500 W",
+  "1000 W",
   "1500 W",
   "2000 W",
   "2500 W",
+  "3000 W",
   "5000 W",
+  "7500 W",
   "10000 W",
+  "15000 W",
   "20000 W",
   "30000 W",
-];
-
-const products = [
-  {
-    id: 1,
-    image: "/img/Stablizators/img3.svg",
-    type: "Напольный",
-    power: "2000 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 2,
-    image: "/img/Stablizators/img3.svg",
-    type: "Настенный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 3,
-    image: "/img/Stablizators/img3.svg",
-    type: "Настенный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 4,
-    image: "/img/Stablizators/img3.svg",
-    type: "Напольный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 5,
-    image: "/img/Stablizators/img3.svg",
-    type: "Напольный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 6,
-    image: "/img/Stablizators/img3.svg",
-    type: "Настенный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 7,
-    image: "/img/Stablizators/img3.svg",
-    type: "Настенный",
-    power: "2000 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 8,
-    image: "/img/Stablizators/img3.svg",
-    type: "Напольный",
-    power: "30000 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 9,
-    image: "/img/Stablizators/img3.svg",
-    type: "Настенный",
-    power: "2500 W",
-    name: "ANDELI SVC–D10000VA",
-  },
-  {
-    id: 10,
-    image: "/img/Stablizators/img3.svg",
-    type: "Напольный",
-    power: "30000 W",
-    name: "ANDELI SVC–D10000VA",
-  },
 ];
 
 // {
@@ -338,7 +271,7 @@ function ProductList1() {
               </div>
             </div>
           )}
-          <div className="md:flex md:flex-wrap mt-[41px] md:gap-[32px] grid grid-cols-2 gap-3">
+          <div className="md:flex md:flex-wrap mt-[41px] md:gap-[32px] grid grid-cols-2 gap-3 space-y-10">
             {filtered.map((prod) => (
               <ProCard setIsOpenModal={setIsOpenModal} prod={prod} />
             ))}
