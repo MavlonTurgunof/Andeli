@@ -72,7 +72,8 @@ function DetailModal({ setIsOpenModal, selectedProduct }) {
             </ul>
 
             <h1 className="md:mt-[48px] mt-[24px] text-[20px]">
-              Тип: <span className="text-[#F5A623]">{product.type}</span>
+              Тип:{" "}
+              <span className="text-[#F5A623]">{selectedProduct?.type}</span>
             </h1>
             <div className="space-y-2 md:mt-[164px] mt-[64px]">
               <button className="w-full text-[16px] font-normal text-white py-[14px] bg-[#0067B3]  rounded-[14px]">
