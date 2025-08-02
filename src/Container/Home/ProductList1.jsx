@@ -42,6 +42,7 @@ function ProductList1() {
     Напольный: [],
     Настенный: [],
   });
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   const handleToggle = () => {
     setIsFilterOpen((prev) => !prev);
@@ -273,7 +274,11 @@ function ProductList1() {
           )}
           <div className="md:flex md:flex-wrap mt-[41px] md:gap-[32px] grid grid-cols-2 gap-3 space-y-10">
             {filtered.map((prod) => (
-              <ProCard setIsOpenModal={setIsOpenModal} prod={prod} />
+              <ProCard
+                setIsOpenModal={setIsOpenModal}
+                prod={prod}
+                setSelectedProductId={setSelectedProductId}
+              />
             ))}
           </div>
           <button
@@ -295,7 +300,12 @@ function ProductList1() {
           </button>
         </div>
 
-        {isOpenModal && <DetailModal setIsOpenModal={setIsOpenModal} />}
+        {isOpenModal && (
+          <DetailModal
+            setIsOpenModal={setIsOpenModal}
+            selectedProduct={products.find((p) => p.id === selectedProductId)}
+          />
+        )}
         {isChatOpen && (
           <div
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"

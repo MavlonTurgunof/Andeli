@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 
-function DetailModal({ setIsOpenModal }) {
+function DetailModal({ setIsOpenModal, selectedProduct }) {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const product = {
     name: "ANDELI SVC-D500W",
-    images: [
-      "/ProDetail/img1.png",
-      "/ProDetail/img2.png",
-      "/ProDetail/img3.png",
-      "/ProDetail/img4.png",
-      "/ProDetail/img5.png",
-    ],
     specs: [
       "Напряжение, В: 220",
       "Входное напряжение, В: 110-250",
@@ -37,13 +30,13 @@ function DetailModal({ setIsOpenModal }) {
           {/* Left side: Thumbnails and Main Image */}
           <div className="flex md:flex-row flex-col-reverse gap-[24px] md:pb-[62px] pb-[20px] border-b-1 border-[#E5E7EB]">
             <div className="flex md:flex-col flex-row md:gap-[16px] gap-[10px]">
-              {product.images.map((img, idx) => (
-                <div className="bg-[#F3F9FB] rounded-[8px] w-full  md:w-[93px] md:h-[124px]">
+              {selectedProduct?.images?.map((img, idx) => (
+                <div className="bg-[#F3F9FB] rounded-[8px] w-full  md:w-[93px] md:h-[124px] flex items-center justify-center">
                   <img
                     key={idx}
                     src={`${img}`}
                     alt={`Thumbnail ${idx}`}
-                    className={`w-full h-full object-contain cursor-pointer border rounded-[16px] ${
+                    className={`w-[95%] h-[95%] object-contain cursor-pointer rounded-[12px] ${
                       selectedImage === idx
                         ? "border-blue-500"
                         : "border-gray-300"
@@ -53,11 +46,11 @@ function DetailModal({ setIsOpenModal }) {
                 </div>
               ))}
             </div>
-            <div className="w-full md:w-[522px] md:h-[696px] rounded-[14px] h-[420px] bg-[#F3F9FB]">
+            <div className="w-full md:w-[522px] md:h-[696px] rounded-[14px] h-[420px] bg-[#F3F9FB] flex items-center justify-center">
               <img
-                src={product.images[selectedImage]}
+                src={selectedProduct?.images[selectedImage]}
                 alt="Main Product"
-                className="w-full h-full object-contain"
+                className="w-[98%] h-[98%] object-contain"
               />
             </div>
           </div>
@@ -68,7 +61,7 @@ function DetailModal({ setIsOpenModal }) {
               Стабилизаторы напряжений
             </h1>
             <h2 className=" md:text-[32px] md:font-semibold text-[20px] font-semibold">
-              {product.name}
+              {selectedProduct?.name}
             </h2>
             <ul className="list-disc md:pl-5 text-[20px] md:mt-[48px] mt-[24px] font-normal pl-[20px]">
               {product.specs.map((spec, idx) => (

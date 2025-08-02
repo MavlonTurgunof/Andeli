@@ -5,6 +5,13 @@ export const products = [
     type: "Напольный",
     power: "500 W",
     name: "ANDELI SVC-D500VA",
+    images: [
+      "/img/Stablizators/SVCD500VA/SVCD500VA.jpg",
+      "/img/Stablizators/SVCD500VA/img1.jpg",
+      "/img/Stablizators/SVCD500VA/img2.jpg",
+      "/img/Stablizators/SVCD500VA/img3.jpg",
+      "/img/Stablizators/SVCD500VA/img4.jpg",
+    ],
   },
   {
     id: 2,
@@ -12,6 +19,13 @@ export const products = [
     type: "Напольный",
     power: "1000 W",
     name: "ANDELI SVC-D1000VA",
+    images: [
+      "/img/Stablizators/SVCD1000VA/SVCD1000VA.jpg",
+      "/img/Stablizators/SVCD1000VA/img1.jpg",
+      "/img/Stablizators/SVCD1000VA/img2.jpg",
+      "/img/Stablizators/SVCD1000VA/img3.jpg",
+      "/img/Stablizators/SVCD1000VA/img4.jpg",
+    ],
   },
   {
     id: 3,
@@ -19,6 +33,13 @@ export const products = [
     type: "Напольный",
     power: "1500 W",
     name: "ANDELI SVC-D1500VA",
+    images: [
+      "/img/Stablizators/SVCD1500VA/SVCD1500VA.jpg",
+      "/img/Stablizators/SVCD1500VA/img1.jpg",
+      "/img/Stablizators/SVCD1500VA/img2.jpg",
+      "/img/Stablizators/SVCD1500VA/img3.jpg",
+      "/img/Stablizators/SVCD1500VA/img4.jpg",
+    ],
   },
   {
     id: 4,
@@ -26,6 +47,13 @@ export const products = [
     type: "Напольный",
     power: "2000 W",
     name: "ANDELI SVC-D2000VA",
+    images: [
+      "/img/Stablizators/SVCD2000VA/SVCD2000VA.jpg",
+      "/img/Stablizators/SVCD2000VA/img1.jpg",
+      "/img/Stablizators/SVCD2000VA/img2.jpg",
+      "/img/Stablizators/SVCD2000VA/img3.jpg",
+      "/img/Stablizators/SVCD2000VA/img4.jpg",
+    ],
   },
   {
     id: 5,
@@ -33,6 +61,13 @@ export const products = [
     type: "Напольный",
     power: "3000 W",
     name: "ANDELI SVC-D3000VA",
+    images: [
+      "/img/Stablizators/SVCD3000VA/SVCD3000VA.jpg",
+      "/img/Stablizators/SVCD3000VA/img1.jpg",
+      "/img/Stablizators/SVCD3000VA/img2.jpg",
+      "/img/Stablizators/SVCD3000VA/img3.jpg",
+      "/img/Stablizators/SVCD3000VA/img4.jpg",
+    ],
   },
   {
     id: 6,
@@ -40,6 +75,13 @@ export const products = [
     type: "Напольный",
     power: "5000 W",
     name: "ANDELI SVC-D5000VA",
+    images: [
+      "/img/Stablizators/SVCD5000VA/SVCD5000VA.jpg",
+      "/img/Stablizators/SVCD5000VA/img1.jpg",
+      "/img/Stablizators/SVCD5000VA/img2.jpg",
+      "/img/Stablizators/SVCD5000VA/img3.jpg",
+      "/img/Stablizators/SVCD5000VA/img4.jpg",
+    ],
   },
   {
     id: 7,
@@ -47,6 +89,13 @@ export const products = [
     type: "Напольный",
     power: "5000 W",
     name: "ANDELI SVC-D5000VA",
+    images: [
+      "/img/Stablizators/SVCD5000VA(2)/SVCD5000VA(2).jpg",
+      "/img/Stablizators/SVCD5000VA(2)/img1.jpg",
+      "/img/Stablizators/SVCD5000VA(2)/img2.jpg",
+      "/img/Stablizators/SVCD5000VA(2)/img3.jpg",
+      "/img/Stablizators/SVCD5000VA(2)/img4.jpg",
+    ],
   },
   {
     id: 8,
@@ -54,6 +103,13 @@ export const products = [
     type: "Напольный",
     power: "7500 W",
     name: "ANDELI SVC-D7500VA",
+    images: [
+      "/img/Stablizators/SVCD7500VA/SVCD7500VA.jpg",
+      "/img/Stablizators/SVCD7500VA/img1.jpg",
+      "/img/Stablizators/SVCD7500VA/img2.jpg",
+      "/img/Stablizators/SVCD7500VA/img3.jpg",
+      "/img/Stablizators/SVCD7500VA/img4.jpg",
+    ],
   },
   {
     id: 9,
@@ -61,6 +117,13 @@ export const products = [
     type: "Напольный",
     power: "7500 W",
     name: "ANDELI SVC-D7500VA",
+    images: [
+      "/img/Stablizators/SVCD7500VA(2)/SVCD7500VA(2).jpg",
+      "/img/Stablizators/SVCD7500VA(2)/img1.jpg",
+      "/img/Stablizators/SVCD7500VA(2)/img2.jpg",
+      "/img/Stablizators/SVCD7500VA(2)/img3.jpg",
+      "/img/Stablizators/SVCD7500VA(2)/img4.jpg",
+    ],
   },
   {
     id: 10,
@@ -68,6 +131,13 @@ export const products = [
     type: "Напольный",
     power: "10000 W",
     name: "ANDELI SVC-D10000VA",
+    images: [
+      "/img/Stablizators/SVCD10000VA/SVCD10000VA.jpg",
+      "/img/Stablizators/SVCD10000VA/img1.jpg",
+      "/img/Stablizators/SVCD10000VA/img2.jpg",
+      "/img/Stablizators/SVCD10000VA/img3.jpg",
+      "/img/Stablizators/SVCD10000VA/img4.jpg",
+    ],
   },
   {
     id: 11,
@@ -75,6 +145,13 @@ export const products = [
     type: "Напольный",
     power: "10000 W",
     name: "ANDELI SVC-D10000VA",
+    images: [
+      "/img/Stablizators/SVCD10000VA(2)/SVCD10000VA(2).jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img1.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img2.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img3.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img4.jpg",
+    ],
   },
   {
     id: 12,
@@ -82,6 +159,13 @@ export const products = [
     type: "Напольный",
     power: "20000 W",
     name: "ANDELI SVC-D20000VA",
+    images: [
+      "/img/Stablizators/SVCD10000VA(2)/SVCD10000VA(2).jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img1.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img2.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img3.jpg",
+      "/img/Stablizators/SVCD10000VA(2)/img4.jpg",
+    ],
   },
   {
     id: 13,
@@ -89,6 +173,13 @@ export const products = [
     type: "Напольный",
     power: "30000 W",
     name: "ANDELI SVC-D30000VA",
+    images: [
+      "/img/Stablizators/SVCD30000VA/SVCD30000VA.jpg",
+      "/img/Stablizators/SVCD30000VA/img1.jpg",
+      "/img/Stablizators/SVCD30000VA/img2.jpg",
+      "/img/Stablizators/SVCD30000VA/img3.jpg",
+      "/img/Stablizators/SVCD30000VA/img4.jpg",
+    ],
   },
   {
     id: 14,
@@ -96,6 +187,13 @@ export const products = [
     type: "Напольный",
     power: "15000 W",
     name: "ANDELI SVC-D15000VA",
+    images: [
+      "/img/Stablizators/SVCD15000VA/SVCD15000VA.jpg",
+      "/img/Stablizators/SVCD15000VA/img1.jpg",
+      "/img/Stablizators/SVCD15000VA/img2.jpg",
+      "/img/Stablizators/SVCD15000VA/img3.jpg",
+      "/img/Stablizators/SVCD15000VA/img4.jpg",
+    ],
   },
   {
     id: 15,
@@ -103,6 +201,13 @@ export const products = [
     type: "Настенный",
     power: "500 W",
     name: "ANDELI SVC-D500VA",
+    images: [
+      "/img/Stablizators/SDW500VA/SDW500VA.jpg",
+      "/img/Stablizators/SDW500VA/img1.jpg",
+      "/img/Stablizators/SDW500VA/img2.jpg",
+      "/img/Stablizators/SDW500VA/img3.jpg",
+      "/img/Stablizators/SDW500VA/img4.jpg",
+    ],
   },
   {
     id: 16,
@@ -110,6 +215,13 @@ export const products = [
     type: "Настенный",
     power: "1000 W",
     name: "ANDELI SVC-D1000VA",
+    images: [
+      "/img/Stablizators/SDW1000VA/SDW1000VA.jpg",
+      "/img/Stablizators/SDW1000VA/img1.jpg",
+      "/img/Stablizators/SDW1000VA/img2.jpg",
+      "/img/Stablizators/SDW1000VA/img3.jpg",
+      "/img/Stablizators/SDW1000VA/img4.jpg",
+    ],
   },
   {
     id: 17,
@@ -117,6 +229,13 @@ export const products = [
     type: "Настенный",
     power: "1500 W",
     name: "ANDELI SVC-D1500VA",
+    images: [
+      "/img/Stablizators/SDW1500VA/SDW1500VA.jpg",
+      "/img/Stablizators/SDW1500VA/img1.jpg",
+      "/img/Stablizators/SDW1500VA/img2.jpg",
+      "/img/Stablizators/SDW1500VA/img3.jpg",
+      "/img/Stablizators/SDW1500VA/img4.jpg",
+    ],
   },
   {
     id: 18,
@@ -124,6 +243,13 @@ export const products = [
     type: "Настенный",
     power: "2000 W",
     name: "ANDELI SVC-D2000VA",
+    images: [
+      "/img/Stablizators/SDW2000VA/SDW2000VA.jpg",
+      "/img/Stablizators/SDW2000VA/img1.jpg",
+      "/img/Stablizators/SDW2000VA/img2.jpg",
+      "/img/Stablizators/SDW2000VA/img3.jpg",
+      "/img/Stablizators/SDW2000VA/img4.jpg",
+    ],
   },
   {
     id: 19,
@@ -131,6 +257,13 @@ export const products = [
     type: "Настенный",
     power: "3000 W",
     name: "ANDELI SVC-D3000VA",
+    images: [
+      "/img/Stablizators/SDW3000VA/SDW3000VA.jpg",
+      "/img/Stablizators/SDW3000VA/img1.jpg",
+      "/img/Stablizators/SDW3000VA/img2.jpg",
+      "/img/Stablizators/SDW3000VA/img3.jpg",
+      "/img/Stablizators/SDW3000VA/img4.jpg",
+    ],
   },
   {
     id: 20,
@@ -138,6 +271,13 @@ export const products = [
     type: "Настенный",
     power: "7500 W",
     name: "ANDELI SVC-D7500VA",
+    images: [
+      "/img/Stablizators/SDW7500VA/SDW7500VA.jpg",
+      "/img/Stablizators/SDW7500VA/img1.jpg",
+      "/img/Stablizators/SDW7500VA/img2.jpg",
+      "/img/Stablizators/SDW7500VA/img3.jpg",
+      "/img/Stablizators/SDW7500VA/img4.jpg",
+    ],
   },
   {
     id: 21,
@@ -145,6 +285,13 @@ export const products = [
     type: "Настенный",
     power: "10000 W",
     name: "ANDELI SVC-D10000VA",
+    images: [
+      "/img/Stablizators/SDW10000VA/SDW10000VA.jpg",
+      "/img/Stablizators/SDW10000VA/img1.jpg",
+      "/img/Stablizators/SDW10000VA/img2.jpg",
+      "/img/Stablizators/SDW10000VA/img3.jpg",
+      "/img/Stablizators/SDW10000VA/img4.jpg",
+    ],
   },
   {
     id: 22,
@@ -152,5 +299,12 @@ export const products = [
     type: "Настенный",
     power: "15000 W",
     name: "ANDELI SVC-D15000VA",
+    images: [
+      "/img/Stablizators/SDW15000VA/SDW15000VA.jpg",
+      "/img/Stablizators/SDW15000VA/img1.jpg",
+      "/img/Stablizators/SDW15000VA/img2.jpg",
+      "/img/Stablizators/SDW15000VA/img3.jpg",
+      "/img/Stablizators/SDW15000VA/img4.jpg",
+    ],
   },
 ];
