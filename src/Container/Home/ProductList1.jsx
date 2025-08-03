@@ -272,7 +272,7 @@ function ProductList1() {
               </div>
             </div>
           )}
-          <div className="md:flex md:flex-wrap mt-[41px] md:gap-[32px] grid grid-cols-2 gap-3 space-y-10">
+          <div className="md:flex md:flex-wrap mt-[41px] md:gap-[32px] grid grid-cols-2 gap-3">
             {filtered.map((prod) => (
               <ProCard
                 setIsOpenModal={setIsOpenModal}
