@@ -32,3 +32,23 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #008ecc;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.grid-container > li {
+  background-color: #efefef;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.item9 {
+  grid-column: 1 / span 2;
+}
+.item10 {
+  grid-column: 1 / span 2;
+}

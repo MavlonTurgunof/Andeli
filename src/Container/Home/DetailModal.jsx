@@ -93,9 +93,22 @@ function DetailModal({ setIsOpenModal, selectedProduct }) {
             </div>
           </div>
         </div>
-        <div className="text-[16px] font-normal mb-[71px]">
-          <h1 className="font-semibold text-[18px]">Описание товара:</h1>
-          <p>{product.description}</p>
+        <div className="text-[16px] font-normal mb-[71px] mx-5">
+          <h1 className="font-normal text-[32px]">Описание товара</h1>
+          <ul className="grid-container list-disc list-inside">
+            <li className="item1">Производительность - 1000VA</li>
+            <li className="item2">Напряжение - 220V</li>
+            <li className="item3">Входное напряжение - 110V-250V</li>
+            <li className="item4">Выходное напряжение 220 В ± 3%, 110В ± 3%</li>
+            <li className="item5">Частота 50H/60Hz</li>
+            <li className="item6">
+              Температура окруж. среды -10 ° C ~ ± 40 ° С
+            </li>
+            <li className="item7">Коэффициент мощности COS ∮ 0,8</li>
+            <li className="item8">{`Insutalion сопротивления > 5 мОм`}</li>
+            <li className="item9">{`Время реакции <1 сек. (Против 10% отклонения входного напряжения)`}</li>
+            <li className="item10">{`Относительная влажность <90% Искажение формы волны Номера для верности отсутствие сигнала`}</li>
+          </ul>
         </div>
       </div>
     </div>
