@@ -24,7 +24,6 @@ export const products = [
       "/img/Stablizators/SDW1000VA/img1.jpg",
       "/img/Stablizators/SDW1000VA/img2.jpg",
       "/img/Stablizators/SDW1000VA/img3.jpg",
-      "/img/Stablizators/SDW1000VA/img4.jpg",
     ],
   },
   {
@@ -272,11 +271,11 @@ export const products = [
     power: "20000 W",
     name: "ANDELI SVC-D20000VA",
     images: [
-      "/img/Stablizators/SVCD10000VA(2)/SVCD10000VA(2).jpg",
-      "/img/Stablizators/SVCD10000VA(2)/img1.jpg",
-      "/img/Stablizators/SVCD10000VA(2)/img2.jpg",
-      "/img/Stablizators/SVCD10000VA(2)/img3.jpg",
-      "/img/Stablizators/SVCD10000VA(2)/img4.jpg",
+      "/img/Stablizators/SVCD20000VA/SVCD20000VA.jpg",
+      "/img/Stablizators/SVCD20000VA/img1.jpg",
+      "/img/Stablizators/SVCD20000VA/img2.jpg",
+      "/img/Stablizators/SVCD20000VA/img3.jpg",
+      "/img/Stablizators/SVCD20000VA/img4.jpg",
     ],
   },
   {
