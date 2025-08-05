@@ -19,7 +19,7 @@ function AiSec() {
 
     try {
       const response = await axios.post(
-        "https://staging.zingo.uz/api/Gemini/ask",
+        "https://staging.calora.uz/api/Gemini/ask",
         {
           hashCode:
             "$2y$10$EylyeBAtyJCPoN8TMzmqvuwd.cs6LGYubIeZHfthjzA6XMQUttJHG",
